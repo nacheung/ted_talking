@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TED Talking</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon.svg">
+
+</head>
+
+<body>
+  <!-- Add HTML content, SVG drawing area, ... -->
+  <h1 class="title">TED TALKING</h1>
+  <p class="intro-blurb">
+    With so many TED talks presented each 
+    year, it can be easy to overlook those talks which don’t go viral on YouTube. We want to help 
+    TED enjoyers find talks on themes that they are interested in, which they might miss otherwise. We 
+    hope to allow users to explore relationships within the talks they are interested in, information 
+    about the speakers, and how TED talk themes have changed over time.
+  </p>
+  
+  <div class ="all" style="margin-bottom: 30px">
+    <div class="column left-Do col">
+        <div class="chord-diagram-container">
+          <h1>Talks by Theme</h1>
+          <p class="main-text">
+            The chord diagram shows the top 50 most common themes. A link between two themes <br>
+            means there is at least one talk with both of these themes. Click on themes to select them.
+          </p>
+          <svg id="chord-diagram"></svg>
+        </div>
+        <div class="selected-tags-section">
+          <h1>Select themes</h1>
+          <p class="main-text">Themes can be selected above in the "Talks by Theme" diagram</p>
+          <div class="selected-tags">
+            Selected themes:
+            <div class="selected-tag" id="tag-1"></div>
+            <div class="selected-tag" id="tag-2"></div>
+            <div class="selected-tag" id="tag-3"></div>
+          </div>
+        </div>
+        <div class="beeswarm-chart-container">
+          <h1>Talks by Views</h1>
+          <div id="beeswarm-chart"></div>
+        </div>
+    </div>
+    <div class="column right-col">
+      <div class="circle-pack-container">
+        <h1>Speaker Occupation</h1>
+        <p class="main-text">
+           Want to find a talk by someone in a specific professtional field?<br>
+           Choose a talk based on the speakers occupation below
+        </p>
+        <div id="circle-pack"></div>
+      </div>
+      <div class="range_container">
+        <h1>Adjust duration</h1>
+        <div class="sliders_control">
+          <input id="fromSlider" type="range" value="2" min="2" max="45" />
+          <input id="toSlider" type="range" value="45" min="2" max="45" />
+        </div>
+        <div class="form_control">
+          <div class="form_control_container">
+            Min. <input class="form_control_container__time__input" type="number" id="fromInput" value="2" min="2" max="45" /> Minutes
+          </div>
+          <div class="form_control_container">
+            Max. <input class="form_control_container__time__input" type="number" id="toInput" value="45" min="2" max="45" /> Minutes
+          </div>
+        </div>
+      </div>
+        <div class="linechart-container">
+          <h1>Talks Per Year</h1>
+          <div id="linechart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="tooltip"></div>
+  <!-- D3 bundle -->
+  <script src="js/d3.v6.min.js"></script>
+  <script src="js/linechart.js"></script>
+  <script src="js/circlepack.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chord.js"></script>
+  <script src="js/beeswarm.js"></script>
+
+
+</body>
+
+</html>
