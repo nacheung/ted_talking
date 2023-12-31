@@ -7,7 +7,7 @@ class BeeswarmChart {
   constructor(_config, _data) {
     this.config = {
       parentElement: _config.parentElement,
-      containerWidth: _config.containerWidth || 800,
+      containerWidth: _config.containerWidth || 600,
       containerHeight: _config.containerHeight || 420,
       tooltipPadding: 15,
       margin: _config.margin || {
