@@ -278,7 +278,7 @@ class LineChart {
       .data(vis.selectedTags, (d) => d)
       .join("circle")
       .attr("class", "legend-mark")
-      .attr("cx", (d, i) => i * 160 + 150)
+      .attr("cx", (d, i) => i * 170 + 110)
       .attr("cy", 10)
       .attr("r", 5)
       .style("stroke", (d) => tagColours[d])
@@ -289,7 +289,7 @@ class LineChart {
       .data(vis.selectedTags, (d) => d)
       .join("text")
       .attr("class", "main-text")
-      .attr("dx", (d, i) => i * 160 + 160)
+      .attr("dx", (d, i) => i * 170 + 120)
       .attr("dy", 15)
       .text((d) => d);
 
